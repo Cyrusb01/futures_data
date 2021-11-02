@@ -6,6 +6,7 @@ import time
 import streamlit as st
 import yfinance as yf
 import plotly.express as px
+import os
 st.title("Binance Futures Visualization")
 
 asset = st.selectbox("Which crypto would you like to see the futures for", ["BTC", "ETH", "ADA", "BCH", "BNB", "DOT", "LINK", "LTC", "XRP"])
@@ -17,7 +18,8 @@ def jprint(obj):
     text = json.dumps(obj, sort_keys=True, indent=4)
     print(text)
 
-
+api_key = os.getenv("BINANCE_API")
+api_secret = os.getenv("BINANCE_API_SECRET")
 client = Client(api_key, api_secret)
 
 # btc_price = client.get_symbol_ticker(symbol="BTCBUSD")
