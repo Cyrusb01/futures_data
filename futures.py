@@ -10,9 +10,7 @@ st.title("Binance Futures Visualization")
 
 asset = st.selectbox("Which crypto would you like to see the futures for", ["BTC", "ETH", "ADA", "BCH", "BNB", "DOT", "LINK", "LTC", "XRP"])
 
-api_key = "IcY1fDuOY6VbasClD6OGeoFxs0vVulEwlDypRWQaOtAIoLod0w3izQ6E5JVAxzUz"
 
-api_secret = "lAPl5qXkEKj6pxOUzFUV0m7XO7QM9LgPI5R664yNS3yV34rcvoO8qmGpGs5infG0"
 
 def jprint(obj):
     # create a formatted string of the Python JSON object
